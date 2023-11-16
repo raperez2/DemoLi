@@ -11,7 +11,7 @@ RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 
 #Copy the packages
-COPY package*.json /home/node/app
+COPY package*.json ./
 
 #Check that files are owned by non-root user
 USER node
