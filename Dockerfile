@@ -1,5 +1,5 @@
 #ligt weight version of linux
-FROM node:3.18.4-alpine
+FROM node:lts-alpine3.18
 
 #Node environment
 ENV NODE_ENV production
