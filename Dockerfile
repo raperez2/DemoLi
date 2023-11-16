@@ -16,7 +16,7 @@ COPY package*.json ./
 #Check that files are owned by non-root user
 USER node
 
-RUN npm install
+RUN npm ci
 
 #Copy application code
 COPY --chown=node:node . .
