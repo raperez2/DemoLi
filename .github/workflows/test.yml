@@ -19,7 +19,7 @@ jobs:
       - name: run image
         run: docker run -d -p 80:80 ${{secrets.DOCKER_USERNAME}}/liatapp
       - name: liat tests
-        uses: liatrio/github-actions/apprentice-action@masterv71
+        uses: liatrio/github-actions/apprentice-action@master
       - name: login docker
         uses: docker/login-action@v1
         with:
