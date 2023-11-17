@@ -21,7 +21,7 @@ RUN npm ci
 #Copy application code
 COPY --chown=node:node . .
 
-EXPOSE 80
+EXPOSE 8080
 
 #Start the application
 CMD [ "node", "index.js" ]
