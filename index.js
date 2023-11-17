@@ -6,7 +6,7 @@ var jsonObj = {
     "timestamp": Date().now()/1000,
 }
 
-app.listen(process.env.PORT || 80, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log(`Server running ...`)
 })
 
