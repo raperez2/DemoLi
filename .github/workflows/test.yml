@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run image
-        run: docker run -d -p 80:80 ${{secrets.DOCKER_USERNAME}}/liatapp
+        run: docker run -dp 80:8080 ${{secrets.DOCKER_USERNAME}}/liatapp
       - name: liat tests
         uses: liatrio/github-actions/apprentice-action@921d5abcef26851810ca11a97e1418c1c3f95e0b
       - name: login docker
