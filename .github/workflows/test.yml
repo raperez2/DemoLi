@@ -11,11 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: build docker image
         run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USERNAME}}/liatapp
-  test-deploy:
-    name: tests to deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+      - name: tests to deploy
       - name: run image
         run: docker run -dp 80:8080 ${{secrets.DOCKER_USERNAME}}/liatapp
       - name: liat tests
